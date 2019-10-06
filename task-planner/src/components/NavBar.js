@@ -19,6 +19,8 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
+import UserIcon from "../images/user-icon.png"
+import Grid from '@material-ui/core/Grid';
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -112,7 +114,7 @@ export default function PersistentDrawerLeft() {
           <Typography variant="h6" noWrap>
             Task Planner
           </Typography>
-          <Link to="/task" style={{marginLeft:"80%"}}>
+          <Link to="/task" style={{marginLeft:"70%",textDecoration:"none",marginRight:"50px"}}>
             <img src={logo} alt="logo" style={{width:"60px",height:"60px"}}/>
           </Link>
         </Toolbar>
@@ -132,21 +134,26 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
         <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <Grid container spacing={2}>
+            <Grid item xs={3} sm={3}>
+                <img src={UserIcon} style={{width:"100%",height:"50%",marginTop:"20px"}} alt="UserIcon"/>
+            </Grid>
+            <Grid item xs={9} sm={9}>
+                <p>Andres Giovanne Florez Perez</p>
+                <p>anflo.97@gmail.com</p>
+            </Grid>
+        </Grid>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['Log Out'].map((text, index) => (
+            <Link to="/register" style={{textDecoration:"none",color:"#000"}}>
             <ListItem button key={text}>
+            
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
+             
             </ListItem>
+            </Link>
           ))}
         </List>
       </Drawer>

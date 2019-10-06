@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -118,7 +118,7 @@ export default function SignUp() {
                         </Grid>
 
                     </Grid>
-                    <Link to="/login">
+                    <Link to="/login" style={{textDecoration:"none"}}>
                         <Button
                             type="submit"
                             fullWidth
@@ -131,7 +131,7 @@ export default function SignUp() {
                     </Link>
                     <Grid container justify="flex-end">
                         <Grid item>
-                            <Link href="/" variant="body2">
+                            <Link to="/" style={{textDecoration:"none"}}>
                                 Already have an account? Sign in
               </Link>
                         </Grid>

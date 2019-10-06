@@ -53,9 +53,6 @@ class login extends React.Component {
             <br></br>
             <Link to="/task" style={{textDecoration:"none"}}>
               <Button
-                  style={{
-                  backgroundColor: '#6200EE'
-                  }}
                 type='submit'
                 fullWidth
                 variant='contained'
@@ -69,7 +66,7 @@ class login extends React.Component {
             <Grid container>
              
               <Grid item>
-                <Link to="/register">
+                <Link to="/register" style={{textDecoration:"none"}}>
                 {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
