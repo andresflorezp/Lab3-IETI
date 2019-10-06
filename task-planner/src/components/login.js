@@ -51,7 +51,7 @@ class login extends React.Component {
               id='password'
               autoComplete='current-password' />
             <br></br>
-            <Link to="/home" style={{textDecoration:"none"}}>
+            <Link to="/task" style={{textDecoration:"none"}}>
               <Button
                   style={{
                   backgroundColor: '#6200EE'
