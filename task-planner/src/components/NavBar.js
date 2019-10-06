@@ -23,6 +23,7 @@ import UserIcon from "../images/user-icon.png"
 import Grid from '@material-ui/core/Grid';
 const drawerWidth = 240;
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
