@@ -145,12 +145,13 @@ export default function PersistentDrawerLeft() {
         </Grid>
         <Divider />
         <List>
-          {['Log Out'].map((text, index) => (
+          {['Log Out'
+          ].map((text, index) => (
             <Link to="/register" style={{textDecoration:"none",color:"#000"}}>
             <ListItem button key={text}>
             
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemIcon >{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary="Sign Out" />
              
             </ListItem>
             </Link>
